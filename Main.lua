@@ -1,9 +1,10 @@
+--This script is open source for all <3 if you want to check how it works feel fee to do so. Im using Rayfield UI library.
 loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Disable-adonis-anti-cheat-19754"))()
 
-local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Godo Hub - Total Drama: Reboot",
+   Name = "Godo Hub",
    Icon = 0,
    LoadingTitle = "GodoHub",
    LoadingSubtitle = "by GodoSop",
@@ -32,8 +33,8 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local BasicTab = Window:CreateTab("Basic", nil) -- Title, Image
-local Section = BasicTab:CreateSection("Basic functions")   
+local BasicTab = Window:CreateTab("Main", nil)
+local Section = BasicTab:CreateSection("Basic Features")   
 
 local Idol = BasicTab:CreateButton({
    Name = "Find Idol",
