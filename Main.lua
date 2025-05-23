@@ -52,7 +52,6 @@ local Idol = BasicTab:CreateButton({
             if Bag then
                Bag.CFrame = startingpos.CFrame
             end
-      end)
    end,
 })
 
