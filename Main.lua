@@ -32,10 +32,10 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Basic = Window:CreateTab("Basic", nil) -- Title, Image
-local Section = Basic:CreateSection("Basic functions")   
+local BasicTab = Window:CreateTab("Basic", nil) -- Title, Image
+local Section = BasicTab:CreateSection("Basic functions")   
 
-local Idol = Basic:CreateButton({
+local Idol = BasicTab:CreateButton({
    Name = "Find Idol",
    Callback = function()
   local player = game.Players.LocalPlayer
@@ -55,7 +55,7 @@ local Idol = Basic:CreateButton({
    end,
 })
 
-local WinObby = Basic:CreateButton({
+local WinObby = BasicTab:CreateButton({
    Name = "Win Obby",
    Callback = function()
       local WinPart = workspace:GetChildren()
@@ -74,7 +74,7 @@ local WinObby = Basic:CreateButton({
    end,
 })
 
-local VoteOut = Basic:CreateInput({
+local VoteOut = BasicTab:CreateInput({
    Name = "Vote anyone out",
    CurrentValue = "",
    PlaceholderText = "Name",
@@ -90,7 +90,7 @@ local VoteOut = Basic:CreateInput({
    end,
 })
 
-local FreezeGame = Basic:CreateButton({
+local FreezeGame = BasicTab:CreateButton({
    Name = "Freeze game(Press during challenge)",
    Callback = function()
    local args = {
