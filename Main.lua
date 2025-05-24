@@ -45,13 +45,26 @@ local Idol = BasicTab:CreateButton({
             local Bag = workspace:WaitForChild("Bag", 100)
             local startingpos = workspace:WaitForChild(tostring(player)).HumanoidRootPart.CFrame
 
-            -- Move the models using their PrimaryPart
-            if SafetyStatue then
-               SafetyStatue.CFrame = startingpos
-            end
-            if Bag then
-               Bag.CFrame = startingpos
-            end
+if Bag and Bag:IsA("Model") then
+    for _, part in ipairs(Bag:GetDescendants()) do
+        if part:IsA("BasePart") then
+            Bag.PrimaryPart = part
+            Bag:SetPrimaryPartCFrame(startingPos)
+            break
+        end
+    end
+end
+			
+if SafetyStatue and SafetyStatue:IsA("Model") then
+    for _, part in ipairs(SafetyStatue:GetDescendants()) do
+        if part:IsA("BasePart") then
+            SafetyStatue.PrimaryPart = part
+            SafetyStatue:SetPrimaryPartCFrame(startingPos)
+            break
+        end
+    end
+end
+
    end,
 })
 
