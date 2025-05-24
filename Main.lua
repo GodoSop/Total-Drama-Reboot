@@ -47,10 +47,10 @@ local Idol = BasicTab:CreateButton({
 
             -- Move the models using their PrimaryPart
             if SafetyStatue then
-               SafetyStatue.CFrame = CFrame.new(startingpos)
+               SafetyStatue.CFrame = startingpos
             end
             if Bag then
-               Bag.CFrame = CFrame.new(startingpos)
+               Bag.CFrame = startingpos
             end
    end,
 })
