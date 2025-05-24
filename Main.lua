@@ -49,7 +49,7 @@ if Bag and Bag:IsA("Model") then
     for _, part in ipairs(Bag:GetDescendants()) do
         if part:IsA("BasePart") then
             Bag.PrimaryPart = part
-            Bag:SetPrimaryPartCFrame(startingPos)
+            Bag:SetPrimaryPartCFrame(startingpos)
             break
         end
     end
@@ -59,7 +59,7 @@ if SafetyStatue and SafetyStatue:IsA("Model") then
     for _, part in ipairs(SafetyStatue:GetDescendants()) do
         if part:IsA("BasePart") then
             SafetyStatue.PrimaryPart = part
-            SafetyStatue:SetPrimaryPartCFrame(startingPos)
+            SafetyStatue:SetPrimaryPartCFrame(startingpos)
             break
         end
     end
